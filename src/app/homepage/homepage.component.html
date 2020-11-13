@@ -1,0 +1,31 @@
+<div class="titre">Liste des cours ajoutés</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr >
+          	<th scope="col">Id</th>
+            <th scope="col">Titre</th>
+            <th scope="col">Date d'ajout</th>
+            <th scope="col">Description</th>
+            <th scope="col">Coefficient</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of cours">
+            <td>{{c._id}}</td>
+            <td>{{c.titre}}</td>
+            <td>{{c.date}}</td>
+            <td>{{c.description}}</td>
+            <td>{{c.coeff}}</td>
+            <td>
+              <button type="button" class="btn btn-success" (click)="OnUpdateFunction(c)"><fa-icon [icon]="faEdit"></fa-icon></button>
+            <button type="button" class="btn btn-danger" (click)="OnDeleteFunction(c)"><fa-icon [icon]="faTrashAlt"></fa-icon></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

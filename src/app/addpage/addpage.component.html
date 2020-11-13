@@ -1,0 +1,13 @@
+<h1>Ajouter un nouveau cours ici !</h1>
+<form class="col-sm-12" #myForm1="ngForm" (ngSubmit)="OnSubmitAddCours()">
+	
+	<input class="form-control formStyle" placeHolder="Titre" type="text" name="titre" #titre="ngModel" [(ngModel)]="t"/>
+	<input class="form-control formStyle" type="date" placeHolder="Date d'ajout" name="date" #date="ngModel" [(ngModel)]="d"/>
+	<input  class="form-control formStyle" type="text" placeHolder="Description" name="description"  #description="ngModel" [(ngModel)]="desc"/>
+	<input class="form-control formStyle" type="text" placeHolder="Coefficient" name="coeff" #coeff="ngModel" [(ngModel)]="c"/>
+	<input type="submit" value="save" class="btn btn-success formButton" >
+
+</form>
+<p>{{myForm1.value|json}}</p>
+
+

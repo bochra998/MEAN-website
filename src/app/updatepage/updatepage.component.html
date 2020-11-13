@@ -1,0 +1,10 @@
+<h1>vous avez selecionner le cours num {{cid}}</h1>
+<form class="col-sm-12" #myForm="ngForm" (ngSubmit)="OnUpdate(myForm.value)">
+	<input class="form-control formStyle" type="text" name="titre" #titre="ngModel" [(ngModel)]="t"/>
+	<input class="form-control formStyle" type="date" name="date" #date="ngModel" [(ngModel)]="d"/>
+	<input  class="form-control formStyle" type="text" name="description" #description="ngModel" [(ngModel)]="desc"/>
+	<input class="form-control formStyle" type="text" name="coeff" #coeff="ngModel" [(ngModel)]="c"/>
+	<input type="submit" value="save" class="btn btn-success formButton">
+
+</form>
+<p>{{myForm.value|json}}</p>

@@ -1,0 +1,23 @@
+.del p{
+	font-size: 50px;
+	text-align: left;
+	font-weight: bold;
+}
+.del{
+	width: 100%;
+}
+
+@media (max-width: 900px ) {  
+	.del  p{
+		font-size: 30px;
+		font-weight: 100px;
+		margin-top: -220px;
+	}
+}
+@media (max-width: 600px ) {  
+	.del p{
+		font-size: 20px;
+		font-weight: 50px;
+		margin-top: -250px;
+	}
+}
